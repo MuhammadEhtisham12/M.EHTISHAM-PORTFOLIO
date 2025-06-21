@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ehtisham - Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      background: linear-gradient(to right, #f2f2f2, #e8f5f9);
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 500px;
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile-box {
+      text-align: center;
+    }
+
+    .profile-box img {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      border: 3px solid #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    .profile-box h2 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .profile-box p {
+      color: #aaa;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: #ccc;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 5px 0;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #00bcd4;
+      color: black;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #00bcd4;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin-top: 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .main-content {
+      margin-left: 270px;
+      padding: 40px;
+      width: 100%;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    section {
+      margin-bottom: 50px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #00bcd4;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 5px;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill .bar {
+      height: 10px;
+      background: #ddd;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .skill .progress {
+      height: 100%;
+      background: #00bcd4;
+      border-radius: 5px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #00bcd4;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .main-icon {
+      position: absolute;
+      top: -40px;
+      right: 20px;
+      font-size: 64px;
+      color: #00bcd4;
+      opacity: 0.3;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile-box">
+        <img src="images/ehtisham.jpeg" alt="Ehtisham" />
+        <h2>Muhammad Ehtisham</h2>
+        <p>Flutter & Web Developer</p>
+        <a href="resume.pdf" download class="btn">Download Resume</a>
+      </div>
+      <nav>
+        <a href="#about"><i class="fas fa-user"></i> About Me</a>
+        <a href="#objective"><i class="fas fa-bullseye"></i> Objective</a>
+        <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/muhammad-ehtisham-2019ba307" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:chaudharyehtisham4@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </aside>
+    <main class="main-content">
+      <section id="about" data-aos="fade-up">
+        <i class="fas fa-info-circle main-icon"></i>
+        <h1>About Me</h1>
+        <p>I am a 6th semester Computer Science student from UET Lahore with a passion for Flutter development, responsive websites, and problem-solving using code and logic. I love building real-time apps that solve real-world problems and aim to contribute to the tech industry.</p>
+      </section>
+      <section id="objective" data-aos="fade-left">
+        <i class="fas fa-bullseye main-icon"></i>
+        <h1>Objective</h1>
+        <p>To obtain a challenging position as a Software or Mobile App Developer in a reputable organization where I can utilize my skills in Flutter, Web Development, and backend systems to create innovative and impactful applications that solve real-world problems.</p>
+      </section>
+      <section id="skills" data-aos="fade-right">
+        <i class="fas fa-laptop-code main-icon"></i>
+        <h1>Skills</h1>
+        <div class="skill"><span>C++</span><div class="bar"><div class="progress" style="width:90%"></div></div></div>
+        <div class="skill"><span>Flutter</span><div class="bar"><div class="progress" style="width:85%"></div></div></div>
+        <div class="skill"><span>Firebase</span><div class="bar"><div class="progress" style="width:75%"></div></div></div>
+        <div class="skill"><span>HTML/CSS/JS</span><div class="bar"><div class="progress" style="width:80%"></div></div></div>
+        <div class="skill"><span>SQL/Oracle</span><div class="bar"><div class="progress" style="width:70%"></div></div></div>
+      </section>
+      <section id="projects" data-aos="zoom-in">
+        <i class="fas fa-project-diagram main-icon"></i>
+        <h1>Projects</h1>
+        <div class="project-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Car Rental App</h3>
+            <p>Flutter + Firebase based responsive car rental app.</p>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>FoodMart Website</h3>
+            <p>HTML, CSS, JS, PHP based dynamic food shopping website.</p>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Hospital Management</h3>
+            <p>C# project with Oracle database integration.</p>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <h3>Gym & School System</h3>
+            <p>CPP-based systems with OOP and DSA concepts.</p>
+          </div>
+        </div>
+      </section>
+      <section id="education" data-aos="fade-left">
+        <i class="fas fa-university main-icon"></i>
+        <h1>Education</h1>
+        <p><strong>BS Computer Science</strong><br />UET Lahore<br />GPA: 3.018 / 4.0</p>
+      </section>
+      <section id="contact" data-aos="fade-up">
+        <i class="fas fa-address-book main-icon"></i>
+        <h1>Contact</h1>
+        <p><strong>Email:</strong> <a href="mailto:chaudharyehtisham4@gmail.com">chaudharyehtisham4@gmail.com</a></p>
+        <p><strong>Phone:</strong> 0326 5846215</p>
+        <p><strong>Location:</strong> Pattoki, Kasur, Pakistan</p>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init({ duration: 1200, once: true });</script>
+</body>
+</html>
